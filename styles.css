@@ -36,3 +36,8 @@ canvas { background: #111; border: 1px solid var(--border); border-radius: 8px; 
 .info { text-align: center; color: var(--muted); margin: 8px 0; }
 .controls { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }
 .controls button { width: 56px; }
+
+
+/* ensure hidden always wins over any display set by other classes */
+.screen.hidden, .overlay.hidden, .hidden { display: none !important; }
+
