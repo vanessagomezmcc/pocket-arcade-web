@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pocket Arcade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <h1>Pocket Arcade</h1>
+      <div class="meta">
+        <span id="xp">XP 0</span>
+        <span id="stars">Stars 0</span>
+        <span id="coins">Coins 0</span>
+      </div>
+    </header>
+
+    <main id="home" class="screen">
+      <p class="subtitle">Pick a game:</p>
+      <div class="cards">
+        <button class="card" data-game="snake">
+          <h2>Turbo Snake</h2>
+          <p>Classic snake with Dash (pass through yourself once).</p>
+        </button>
+        <button class="card" data-game="tictactoe">
+          <h2>Tic‑Tac‑Toe Gauntlet</h2>
+          <p>Win 3 boards under 90s against a simple AI.</p>
+        </button>
+      </div>
+      <p class="hint">Tip: This is a static website—upload to GitHub and enable Pages.</p>
+    </main>
+
+    <section id="play" class="screen hidden">
+      <div id="game-root"></div>
+      <div class="toolbar">
+        <button id="btn-exit">Home</button>
+      </div>
+    </section>
+
+    <section id="results" class="overlay hidden">
+      <div class="panel">
+        <h3 id="result-title">Results</h3>
+        <p id="result-score">Score: 0</p>
+        <p id="result-stars">Stars earned: 0</p>
+        <div class="row">
+          <button id="btn-again">Play again</button>
+          <button id="btn-home">Home</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
