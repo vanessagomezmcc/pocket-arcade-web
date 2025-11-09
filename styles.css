@@ -1,3 +1,4 @@
+
 :root {
   --bg: #0b0b0b;
   --panel: #151515;
@@ -14,7 +15,7 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
 .topbar h1 { font-size: 20px; margin: 0; }
 .meta { display: flex; gap: 12px; color: var(--muted); font-size: 14px; }
 .screen { padding: 16px; }
-.hidden { display: none !important; pointer-events: none !important; }   /* <— new: guaranteed hidden */
+.hidden { display: none; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
 .card { text-align: left; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px; color: white; cursor: pointer; }
 .card h2 { margin: 0 0 6px; font-size: 18px; }
@@ -24,7 +25,7 @@ html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -ap
 .toolbar { display: flex; justify-content: center; gap: 12px; margin: 8px 0 0; }
 button { background: #222; color: white; border: 1px solid var(--border); padding: 10px 14px; border-radius: 10px; cursor: pointer; }
 button:hover { border-color: var(--accent); }
-.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 1000; }  /* <— z-index added */
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; }
 .panel { width: min(92vw, 420px); background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
 .panel h3 { margin-top: 0; }
 .row { display: flex; gap: 12px; }
@@ -36,5 +37,12 @@ canvas { background: #111; border: 1px solid var(--border); border-radius: 8px; 
 .controls { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }
 .controls button { width: 56px; }
 
+
 /* ensure hidden always wins over any display set by other classes */
 .screen.hidden, .overlay.hidden, .hidden { display: none !important; }
+
+
+/* hidden state is non-interactive */
+.hidden { display: none !important; pointer-events: none !important; }
+/* overlays sit above everything only when visible */
+.overlay { z-index: 1000; }

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pocket Arcade</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <div id="app">
@@ -51,6 +51,15 @@
       </div>
     </section>
   </div>
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main.js?v=3"></script>
+
+  <script>
+    // Safety: ensure results overlay is hidden on initial paint even if CSS cache lingers
+    (function(){ 
+      var r = document.getElementById('results'); 
+      if (r) { r.classList.add('hidden'); r.style.display='none'; }
+    })();
+  </script>
+
 </body>
 </html>
