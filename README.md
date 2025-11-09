@@ -1,4 +1,4 @@
-# Pocket Arcade (Vanessa Edition)
+# Pocket Arcade 
 
 A zero-build, zero-terminal mini-arcade for the web. Pure HTML/CSS/JS. Host it on **GitHub Pages** or any static host. Two games included:
 
