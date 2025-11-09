@@ -1,4 +1,4 @@
-# Pocket Arcade 
+# Pocket Arcade (Vanessa Edition)
 
 A zero-build, zero-terminal mini-arcade for the web. Pure HTML/CSS/JS. Host it on **GitHub Pages** or any static host. Two games included:
 
@@ -11,7 +11,7 @@ Shared progression (XP/Stars/Coins) is saved in **localStorage**.
 1. Click the green **Use this template** (or **Upload files**) on GitHub and create your repo.
 2. Put these files at the repo root.
 3. Enable GitHub Pages: Settings → Pages → Deploy from **/ (root)** or **main branch** → save.
-4. Your site goes live at **[`(https://vanessagomezmcc.github.io/pocket-arcade-web/)`.]**
+4. Your site goes live at `https://<your-username>.github.io/<repo-name>/`.
 
 ## Run locally (optional)
 Just double-click `index.html` in a browser.
